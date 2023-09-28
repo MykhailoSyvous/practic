@@ -69,13 +69,14 @@
    /* --- */
    /* header */
    .header {
-       padding-top: 24px;
-       padding-bottom: 24px;
+       padding-top: 20px;
+       padding-bottom: 20px;
    }
    
    .header-box-conteiner{
-   display: flex;
-   gap: 90px;
+    gap: 90px;
+    display: flex;
+  
    }
    .header-logo {
        color:var(--color-text-grymery);
@@ -88,14 +89,21 @@
        gap: 4px;
        align-items: center;
    }
+   .header-logo::after{
+    content:'';
+    width: 24px;
+    height: 24px;
+    background-image: url(./images/logo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   }
    
    .akcent-logo-header {
        font-style: italic;
    }
-   .header-logo-img{
-       display: flex;
-       text-align: center;
-   }
+ 
+   
    .nav-header-menu{
        display: flex;
        align-items: center;
@@ -107,6 +115,7 @@
      
        display: flex;
        gap: 24px;
+       align-items: center;
       
     
    }
@@ -136,11 +145,32 @@
        align-items: center;
        
    }
+   .header-icon{}
    
-   .header-soc-item {}
+   .header-soc-item {
+    width: 40px;height: 40px;
+   }
    
-   .header-soc-link {}
-   
+   .header-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(17, 17, 17, 0.10);
+display: flex;
+align-items: center;
+justify-content: center;
+
+   }
+   .header-soc-item:hover, .header-soc-item:focus{
+    border-color: 1px solid rgba(253, 146, 34, 0.10);
+
+   }
+   .header-icon{
+    fill: #111;
+   }
+   .header-icon:hover, .header-icon:focus{
+    fill:var(--color-brend)
+   }
    /* Hero section */
    
    .hero {
@@ -152,7 +182,13 @@
    padding: 380px 40px 40px 40px;
    border-radius: 30px;
    background-color: var(--color-background-1st-section);
-          
+   background-image:linear-gradient(rgba(17, 17, 17, 0.40),
+    rgba(17, 17, 17, 0.40)), 
+    url(./images/hero-bg-min.jpg);
+   background-repeat: no-repeat;
+   background-position:center;
+    background-size: cover;
+    
    }
    .hero-title {
        color:var(--color-text-secundary);
@@ -165,7 +201,7 @@
    }
    .buttuns-hero-box{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
    }
    .hero-button {
        background-color: var(--color-brend);
@@ -206,6 +242,19 @@
        line-height: 1.29;
        letter-spacing: -0.03em;
        margin-left: auto;
+       display: flex;
+       align-items: center;
+       gap: 14px;
+   }
+   .hero-button-two::after{
+    content: '';
+    width: 38px;
+    height: 38px;
+    background-color: #FFF;
+   
+ 
+    border-radius: 50%;
+    align-items: center;
    }
    
    /* advantages section */
